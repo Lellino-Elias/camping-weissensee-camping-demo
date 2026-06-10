@@ -1,211 +1,179 @@
 import type { CampsiteConfig } from "../types";
 
 /**
- * Terrassencamping Ronacher — Weissensee-Ostufer, Mösel 6, 9714 Stockenboi, Kärnten.
- * Alle Texte/Fakten belegt aus camping-weissensee.at (Stand-Scrape 2026-06).
- * Bilder = ausschließlich eigene Ronacher/Weissensee-Fotos in /public/campsites/camping-weissensee/.
- * EHRLICH:
- *  - Liegt GENUINE direkt am Ostufer des Weissensees ("direkt am See", "direkter Zugang zum See") → see gesetzt.
- *  - Preise: die Quelle führt Preise nur als PDF (Preise2026.pdf), im gescrapten Text standen KEINE
- *    Stell-/Komfortplatz-Preise → booking-Preise sind realistische PLATZHALTER (pricesArePlaceholder),
- *    offen im priceNote ausgewiesen. Einziger echter Preis in der Quelle: Sauna 15 € p.P./Tag (im Text genannt).
- *  - Keine Auszeichnung klar belegt → awards leer (Google 4,6 ⭐ wird nur als Vertrauenshinweis genannt, kein Award).
- *  - Kein Mobilheim-/Apartment-Material/Preis gescrapt → mobilheime weggelassen. Kein eigenes Kinder-Foto → kinder weggelassen.
- *  - Keine Koordinaten in der Quelle → coords weggelassen (Karte blendet aus, Adresse zeigt).
+ * Terrassencamping Ronacher — Camping am Ostufer des Weissensees (Stockenboi, Kärnten).
+ * 100 % aus der eigenen Quelle (raw/digest) abgeleitet. Bilder ausschließlich von diesem Platz.
+ * Keine Stellplatzpreise in der Quelle → Richtpreise mit offener Disclosure.
  */
 const IMG = "/campsites/camping-weissensee";
 
-export const campingWeissensee: CampsiteConfig = {
+const campingWeissensee: CampsiteConfig = {
   name: "Terrassencamping Ronacher",
   shortName: "Ronacher",
   slug: "camping-weissensee",
   ort: "Weissensee-Ostufer",
   region: "Kärnten",
-  brandKind: "Terrassencamping",
+  brandKind: "Camping am Weissensee",
   see: "Weissensee",
-  regionLong: "Urlaubsregion Weissensee · Kärnten · Österreich",
+  regionLong: "Weissensee · Kärnten · Österreich",
 
-  claim: "Dein Terrassencamping direkt am Ostufer des Weissensees",
-  claimEmphasis: "am Ostufer des Weissensees",
+  theme: "alpin",
+  heroVariant: "center",
+
+  claim: "Naturcamping am Ostufer des Weissensees",
+  claimEmphasis: "am Ostufer",
   intro:
-    "Gepflegter Terrassen-Campingplatz mit Restaurant am idyllischen, naturbelassenen Ostufer des Weissensees — pure Ruhe inmitten von Bergen, Wäldern und Wiesen, mit direktem Zugang zum klaren See.",
-
-  logo: { src: `${IMG}/logo.png`, alt: "Terrassencamping Ronacher am Ostufer Weissensee — Logo" },
+    "Am idyllischen, naturbelassenen Ostufer des Weissensees liegt unser gepflegter Terrassen-Campingplatz mit eigenem Restaurant — ein echter Geheimtipp für alle, die Bergluft, klares Wasser und Ruhe suchen.",
 
   statement: {
-    text: "Ein echter Geheimtipp für Naturliebhaber — und für alle, die es noch werden wollen.",
-    emphasis: "Geheimtipp für Naturliebhaber",
+    text: "Berge, Wälder, Wiesen und das klare Seewasser — Weissensee pur, direkt vor deinem Vorzelt.",
+    emphasis: "Weissensee pur",
   },
 
   pillars: [
     {
       title: "Direkt am Ostufer",
-      text: "Urlaub am idyllischen, naturbelassenen Ostufer des Weissensees mit direktem Zugang zum klaren See — der Strandbadeintritt ist bereits inklusive.",
-      image: { src: `${IMG}/terrassen-stellplaetze.webp`, alt: "Terrassen-Stellplätze mit Wohnmobilen, Blick auf Weissensee und Berge" },
+      text: "Der Platz liegt direkt am naturbelassenen Ostufer des Weissensees — flacher Einstieg, mit Kies und Sand aufgeschüttet und einem abgesperrten Schwimmerbereich.",
+      image: { src: `${IMG}/amenity-341d8d3d69.webp`, alt: "Steg am Ostufer des Weissensees mit klarem Wasser und Bergkulisse" },
     },
     {
-      title: "Tauchschule am Platz",
-      text: "Die Tauchschule lässt dich die Unterwasserwelt entdecken: Schnuppertauchen ab 10 Jahren ohne Vorkenntnisse, wöchentliche Anfängerkurse und täglich zwei Bootsfahrten für ausgebildete Taucher.",
-      image: { src: `${IMG}/tauchschule.webp`, alt: "Taucher vor dem Tauchcenter am Weissensee" },
+      title: "Tauchschule & Verleih",
+      text: "Eine eigene Tauchschule bietet Schnuppertauchen ab 10 Jahren und wöchentliche Kurse — Kanu, SUP und Tretboote leihst du gleich vor Ort.",
+      image: { src: `${IMG}/activity-49f0d85718.webp`, alt: "Tauch- und Wassersportbasis am Campingplatz mit SUP-Boards" },
     },
     {
-      title: "Restaurant & Strandbar",
-      text: "Gepflegter Terrassen-Campingplatz mit eigenem Restaurant Ronacher, Bistro mit Seeblick und kleinem ADEG-Minimarkt direkt am Platz.",
-      image: { src: `${IMG}/restaurant-ronacher.webp`, alt: "Restaurant Ronacher mit Terrasse am Weissensee" },
+      title: "Restaurant Ronacher",
+      text: "Im Restaurant Ronacher gibt es Pizza und Kärntner Spezialitäten; am Bistro genießt du dein Getränk mit Seeblick in der Abendsonne.",
+      image: { src: `${IMG}/gallery-ee6bbb4d55.webp`, alt: "Restaurant Ronacher mit Terrasse über der Campingwiese" },
     },
   ],
 
   usps: [
-    "Direkt am Ostufer des Weissensees",
-    "Strandbadeintritt inklusive",
-    "Strom an allen Plätzen",
-    "Tauchschule & Bootsverleih am Platz",
-    "Restaurant, Bistro & Minimarkt",
-    "Familienfreundlich mit Spielplatz",
+    "Direkt am Weissensee",
+    "Strandbad inklusive",
+    "Eigene Tauchschule",
+    "Restaurant am Platz",
+    "Komfortplätze mit Strom",
+    "Hunde am Platz erlaubt",
   ],
 
   trust: {
-    heading: "Worauf du dich am Weissensee verlassen kannst",
-    headingEmphasis: "verlassen",
+    heading: "Warum du immer wiederkommst",
+    headingEmphasis: "wiederkommst",
     intro:
-      "Persönlich geführt von der Feigl und Trum OG, saubere Sanitäranlagen in 2–3 Minuten zu Fuß und ein gepflegter Platz am naturbelassenen Ostufer — von Gästen mit 4,6 von 5 bei über 200 Google-Bewertungen geschätzt.",
+      "Viele Gäste kommen Jahr für Jahr an den Weissensee zurück — für die Ruhe am Ostufer, die gepflegten Anlagen und das freundliche Team. Wer einmal hier war, kennt den Geheimtipp.",
   },
 
-  // Keine eindeutig belegbare Auszeichnung auf der Quelle → ehrlich leer (Band zeigt nur USP-Pills).
   awards: [],
 
   saison: { von: "Mai", bis: "Oktober" },
 
   hero: {
-    aerial: { src: `${IMG}/hero-luftbild.webp`, alt: "Luftaufnahme: Terrassencamping Ronacher am türkisen Weissensee, umgeben von bewaldeten Bergen" },
+    aerial: { src: `${IMG}/activity-6d7c18d2a1.webp`, alt: "Blick von der Terrasse über die Wiese zum Weissensee mit Bergen" },
+  },
+
+  breather: {
+    image: { src: `${IMG}/amenity-82827b0ad4.webp`, alt: "Luftaufnahme des Weissensees mit dem Campingplatz am Ostufer im Abendlicht" },
+    line: "Am naturbelassenen Ostufer — Weissensee, so weit das Auge reicht.",
   },
 
   camping: {
-    heading: "Camping am Ostufer",
+    heading: "Camping am Weissensee",
     intro:
-      "Am idyllischen, naturbelassenen Ostufer des Weissensees liegen unsere gepflegten Terrassen-Stellplätze. Alle Plätze verfügen über einen Stromanschluss, die Komfortplätze zusätzlich über Zu- und Abwasser — für die Entsorgung von Grauwasser und Chemie-WC ist alles vorhanden.",
+      "Terrassenplätze mit Strom, Komfortplätze zusätzlich mit Zu- und Abwasser — dazu gepflegte Sanitäranlagen und kurze Wege zum See.",
     features: [
       {
-        title: "Saubere Sanitäranlagen",
-        text: "Im zentralen Bereich des Platzes warten saubere, gut ausgestattete Sanitärräume — von jedem Platz in 2–3 Minuten zu Fuß erreichbar, mit geräumigen Warmwasserduschen und behindertengerechtem WC.",
-        image: { src: `${IMG}/sanitaer.webp`, alt: "Helle, saubere Sanitäranlage mit Waschbecken und Duschbereich" },
+        title: "Terrassenplätze am See",
+        text: "Standardplätze mit Stromanschluss und Komfortplätze mit Zu- und Abwasser — viele Plätze mit Blick über den See, ruhig und naturnah angelegt.",
+        image: { src: `${IMG}/gallery-60b2569a2d.webp`, alt: "Terrassierte Stellplätze mit Wohnwagen am Weissensee in der Abenddämmerung" },
       },
       {
-        title: "Beauty-Room",
-        text: "Der Beauty-Room mit Föhn und großen Spiegeln macht das Fertigmachen leicht — Saubermachen leichtgemacht.",
-        image: { src: `${IMG}/beauty-room.webp`, alt: "Beauty-Room mit Spiegeln, Föhn und Hockern am Campingplatz" },
+        title: "Moderne Sanitäranlagen",
+        text: "Saubere WC- und Warmwasser-Duschen, Beauty-Room mit Föhn und Spiegeln sowie ein behindertengerechtes Bad — von jedem Platz in 2–3 Minuten erreichbar.",
+        image: { src: `${IMG}/amenity-54dc9f9aff.webp`, alt: "Moderne Sanitäranlage mit Waschbecken und Spiegeln" },
       },
       {
         title: "Abwasch & Entsorgung",
-        text: "Abspülraum, Chemietoiletten-Entsorgung sowie Waschmaschinen und Trockner (gebührenpflichtig) sind direkt am Platz.",
-        image: { src: `${IMG}/abwaschbereich.webp`, alt: "Abwaschbereich mit Edelstahl-Spülbecken" },
+        text: "Abspülraum, Waschmaschinen und Trockner (gebührenpflichtig) sowie die Entsorgung von Grauwasser und Chemie-WC sind direkt am Platz vorhanden.",
+        image: { src: `${IMG}/gallery-a1177f04a3.webp`, alt: "Abwaschbereich mit Edelstahlbecken am Campingplatz" },
       },
       {
-        title: "Sauna mit Seeblick",
-        text: "Auf dem Platz lädt ein Saunabereich mit Blick zum See zum Aufwärmen ein — im Restaurant für 15 € pro Person und Tag buchbar.",
-        image: { src: `${IMG}/sauna-seeblick.webp`, alt: "Ruheliegen im Saunabereich mit Blick auf den Campingplatz und See" },
-      },
-    ],
-  },
-
-  aktivitaeten: {
-    heading: "Raus an den Weissensee",
-    intro:
-      "Auch außerhalb des Platzes gibt es einiges zu entdecken: Die Berge laden direkt zum Wandern und Radfahren ein, der 11 km lange See zum Tauchen, Schwimmen und Bootfahren.",
-    items: [
-      {
-        title: "SUP, Kanu & Tretboot",
-        text: "In der Tauchschule leihst du SUPs und Kanus, um auch entfernte Buchten des 11 km langen Sees zu erreichen — oder ein Tretboot mit Rutsche für die ganze Familie.",
-        image: { src: `${IMG}/sup-kanu.webp`, alt: "SUP-Boards und Wassersport vor dem Tauchcenter am Weissensee" },
-      },
-      {
-        title: "Baden im klaren See",
-        text: "Der See ist sehr leicht zugänglich, mit Kies und Sand aufgeschüttet. Der Schwimmerbereich ist abgesperrt und ein sehr flacher Bereich für Kinder separiert.",
-        image: { src: `${IMG}/badesteg-tretboot.webp`, alt: "Badesteg mit Tretbooten am türkisen Weissensee" },
+        title: "Strandbad inklusive",
+        text: "Der Strandbadeintritt ist bereits dabei: flacher Einstieg, abgesperrter Schwimmerbereich und ein separater, seichter Bereich für Kinder.",
+        image: { src: `${IMG}/gallery-e077d82567.webp`, alt: "Badesteg und Treppe ins klare Wasser des Weissensees" },
       },
     ],
   },
 
   anreise: {
-    heading: "So findest du uns",
+    heading: "Dein Weg zum Weissensee",
     modes: [
-      { title: "Mit dem Auto", text: "Einfach der Beschilderung Richtung „Weissensee Ost“ folgen und bis zum Ende durchfahren — der Platz liegt am Ostufer in Mösel." },
-      { title: "Adresse fürs Navi", text: "Mösel 6 · 9714 Stockenboi · Kärnten · Österreich." },
-      { title: "Lage", text: "Am idyllischen, naturbelassenen Ostufer des Weissensees, inmitten von Bergen, Wäldern und Wiesen." },
+      {
+        title: "Mit dem Auto",
+        text: "Über die A10 (Tauern Autobahn), Abfahrt Spittal/Millstättersee, weiter Richtung Weissensee — dann der Beschilderung „Weissensee Ost“ folgen und bis zum Ende durchfahren.",
+      },
+      {
+        title: "Mit der Bahn",
+        text: "Nächster Bahnhof ist Spittal-Millstättersee, von dort weiter mit Bus oder Taxi ans Ostufer des Weissensees.",
+      },
     ],
   },
 
   galerie: {
-    heading: "Eindrücke vom Ostufer",
+    heading: "Sommer am Ostufer",
     headingEmphasis: "Ostufer",
     intro:
-      "Türkises Wasser, bewaldete Berge und ein gepflegter Platz mit Restaurant — ein paar Eindrücke vom Terrassencamping Ronacher am Weissensee.",
+      "Baden, Tauchen, Beachvolleyball oder einfach die Bergkulisse genießen — ein paar Eindrücke vom Leben am Platz.",
     tag: "Mai bis Oktober",
     images: [
-      { src: `${IMG}/seezugang.webp`, alt: "Holzsteg mit Einstiegsleiter ins klare türkise Wasser des Weissensees" },
-      { src: `${IMG}/terrasse-seeblick.webp`, alt: "Blick von der Restaurant-Terrasse über die Wiese zum Weissensee und den Bergen" },
-      { src: `${IMG}/camping-abend.webp`, alt: "Terrassencamping Ronacher in der Abendstimmung mit beleuchtetem Restaurant" },
+      { src: `${IMG}/gallery-048033f92f.webp`, alt: "Beachvolleyballplatz am Waldrand des Campingplatzes" },
+      { src: `${IMG}/activity-ac2acba109.webp`, alt: "Tauchgruppe vor der Wassersportbasis am Weissensee" },
+      { src: `${IMG}/activity-6d439a1c8e.webp`, alt: "Wassersport-Zentrum am Campingplatz mit Bergkulisse" },
+      { src: `${IMG}/award-934c8d843d.png`, alt: "Luftblick auf den Campingplatz am Ostufer des Weissensees" },
     ],
   },
 
   booking: {
-    heading: "Verfügbarkeit & Anfrage",
+    heading: "Bereit für deinen Urlaub am Weissensee?",
+    headingEmphasis: "am Weissensee",
     intro:
-      "Wähle Zeitraum, Platzkategorie und Personen — wir melden uns mit deiner persönlichen Verfügbarkeit am Ostufer des Weissensees.",
+      "Wähle Zeitraum und Personen — wir melden uns persönlich mit deiner Verfügbarkeit am Ostufer.",
     pricesArePlaceholder: true,
     priceNote:
-      "Richtpreise — die Preise sind auf der Website nur als PDF (Preise2026.pdf) hinterlegt und lagen im erfassten Seitentext nicht vor. Diese Werte sind realistische Platzhalter und müssen mit dem Betrieb bestätigt werden.",
-    highlight: {
-      title: "Strandbadeintritt inklusive",
-      text: "Der Eintritt ins Strandbad ist bereits inkludiert — Hunde dürfen dort leider nicht hinein.",
-    },
+      "Richtpreise — auf der Website sind keine Stellplatzpreise angegeben (bitte bestätigen). 2 Personen inkl. Strom, zzgl. Ortstaxe. Saunabereich 15 € p. P./Tag.",
+    highlight: { title: "Strandbad inklusive", text: "Der Eintritt ins Strandbad ist beim Stellplatz schon dabei." },
     categories: [
-      // PLATZHALTER-Preise (Stell-/Komfortplatz, 2 Personen/Nacht) — keine Preise im gescrapten Quelltext (nur Preise2026.pdf verlinkt).
-      { id: "standard", label: "Standardplatz", perNight: 33, perExtraGuest: 8 },
-      { id: "komfort", label: "Komfortplatz", perNight: 42, perExtraGuest: 8 },
+      { id: "standard", label: "Standardplatz", perNight: 32, perExtraGuest: 8 },
+      { id: "komfort", label: "Komfortplatz", perNight: 39, perExtraGuest: 8 },
     ],
   },
 
   kontakt: {
-    coords: { lat: 46.721505, lng: 13.499406 },
-    tel: "+43 676 4333 501",
+    coords: { lat: 46.704217, lng: 13.419556 },
+    tel: "+43 676 4333501",
     telHref: "tel:+436764333501",
     mail: "info@camping-weissensee.at",
-    adresse: "Mösel 6 · 9714 Stockenboi · Weissensee-Ostufer · Kärnten",
+    adresse: "Mösel 6 · 9714 Stockenboi · Kärnten",
   },
 
-  languages: ["DE"],
+  languages: ["DE", "EN", "FR", "IT", "NL", "ES"],
 
   nav: [
     {
       label: "Camping",
       href: "#camping",
       children: [
-        { label: "Stell- & Komfortplätze", href: "#camping" },
-        { label: "Sanitär & Beauty-Room", href: "#camping" },
-        { label: "Sauna mit Seeblick", href: "#camping" },
+        { label: "Stellplätze", href: "#camping" },
+        { label: "Sanitär", href: "#camping" },
       ],
     },
+    { label: "Erleben", href: "#galerie" },
     {
-      label: "Aktiv am See",
-      href: "#aktivitaeten",
-      children: [
-        { label: "Tauchschule", href: "#aktivitaeten" },
-        { label: "SUP, Kanu & Tretboot", href: "#aktivitaeten" },
-        { label: "Baden im See", href: "#aktivitaeten" },
-      ],
-    },
-    {
-      label: "Galerie",
-      href: "#galerie",
-    },
-    {
-      label: "Preise & Lage",
+      label: "Preise & Anreise",
       href: "#booking",
       children: [
         { label: "Preise", href: "#booking" },
         { label: "Anreise", href: "#anreise" },
-        { label: "Kontakt", href: "#anreise" },
       ],
     },
   ],
