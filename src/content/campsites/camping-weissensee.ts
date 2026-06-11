@@ -17,7 +17,6 @@ const campingWeissensee: CampsiteConfig = {
   see: "Weissensee",
   regionLong: "Weissensee · Kärnten · Österreich",
 
-  theme: "alpin",
   heroVariant: "center",
 
   claim: "Naturcamping am Ostufer des Weissensees",
