@@ -32,12 +32,12 @@ const campingWeissensee: CampsiteConfig = {
   pillars: [
     {
       title: "Direkt am Ostufer",
-      text: "Der Platz liegt direkt am naturbelassenen Ostufer des Weissensees — flacher Einstieg, mit Kies und Sand aufgeschüttet und einem abgesperrten Schwimmerbereich.",
+      text: "Der Platz liegt direkt am naturbelassenen Ostufer — flacher Seeeinstieg mit Kies und Sand sowie abgesperrtem Schwimmerbereich.",
       image: { src: `${IMG}/amenity-341d8d3d69.webp`, alt: "Steg am Ostufer des Weissensees mit klarem Wasser und Bergkulisse" },
     },
     {
       title: "Tauchschule & Verleih",
-      text: "Eine eigene Tauchschule bietet Schnuppertauchen ab 10 Jahren und wöchentliche Kurse — Kanu, SUP und Tretboote leihst du gleich vor Ort.",
+      text: "Die eigene Tauchschule bietet Schnuppertauchen ab 10 Jahren und Kurse — Kanu, SUP und Tretboote leihst du vor Ort.",
       image: { src: `${IMG}/activity-49f0d85718.webp`, alt: "Tauch- und Wassersportbasis am Campingplatz mit SUP-Boards" },
     },
     {
@@ -83,22 +83,22 @@ const campingWeissensee: CampsiteConfig = {
     features: [
       {
         title: "Terrassenplätze am See",
-        text: "Standardplätze mit Stromanschluss und Komfortplätze mit Zu- und Abwasser — viele Plätze mit Blick über den See, ruhig und naturnah angelegt.",
+        text: "Standardplätze mit Strom und Komfortplätze mit Zu- und Abwasser — viele mit Seeblick, ruhig und naturnah.",
         image: { src: `${IMG}/platz-seeblick-sonne.webp`, alt: "Sonniger Blick über die Terrassenplätze zum Weissensee mit Bergkulisse" },
       },
       {
         title: "Moderne Sanitäranlagen",
-        text: "Saubere WC- und Warmwasser-Duschen, Beauty-Room mit Föhn und Spiegeln sowie ein behindertengerechtes Bad — von jedem Platz in 2–3 Minuten erreichbar.",
+        text: "Saubere WC- und Warmwasser-Duschen, Beauty-Room sowie ein behindertengerechtes Bad — von jedem Platz in 2–3 Minuten.",
         image: { src: `${IMG}/amenity-54dc9f9aff.webp`, alt: "Moderne Sanitäranlage mit Waschbecken und Spiegeln" },
       },
       {
         title: "Abwasch & Entsorgung",
-        text: "Abspülraum, Waschmaschinen und Trockner (gebührenpflichtig) sowie die Entsorgung von Grauwasser und Chemie-WC sind direkt am Platz vorhanden.",
+        text: "Abspülraum, Waschmaschinen und Trockner sowie Entsorgung von Grauwasser und Chemie-WC sind direkt am Platz vorhanden.",
         image: { src: `${IMG}/gallery-a1177f04a3.webp`, alt: "Abwaschbereich mit Edelstahlbecken am Campingplatz" },
       },
       {
         title: "Strandbad inklusive",
-        text: "Der Strandbadeintritt ist bereits dabei: flacher Einstieg, abgesperrter Schwimmerbereich und ein separater, seichter Bereich für Kinder.",
+        text: "Der Strandbadeintritt ist inklusive: flacher Einstieg, Schwimmerbereich und ein separater Bereich für Kinder.",
         image: { src: `${IMG}/gallery-e077d82567.webp`, alt: "Badesteg und Treppe ins klare Wasser des Weissensees" },
       },
     ],
