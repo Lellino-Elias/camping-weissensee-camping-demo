@@ -127,7 +127,7 @@ const campingWeissensee: CampsiteConfig = {
     images: [
       { src: `${IMG}/gallery-048033f92f.webp`, alt: "Beachvolleyballplatz am Waldrand des Campingplatzes" },
       { src: `${IMG}/activity-ac2acba109.webp`, alt: "Tauchgruppe vor der Wassersportbasis am Weissensee" },
-      { src: `${IMG}/activity-6d439a1c8e.webp`, alt: "Wassersport-Zentrum am Campingplatz mit Bergkulisse" },
+      { src: `${IMG}/activity-1e2fa2a7e4.webp`, alt: "Terrassenplätze am Campingplatz Ronacher mit Blick zum Weissensee und Bergen" },
       { src: `${IMG}/award-934c8d843d.png`, alt: "Luftblick auf den Campingplatz am Ostufer des Weissensees" },
     ],
   },
