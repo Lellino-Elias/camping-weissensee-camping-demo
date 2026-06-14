@@ -84,7 +84,7 @@ const campingWeissensee: CampsiteConfig = {
       {
         title: "Terrassenplätze am See",
         text: "Standardplätze mit Stromanschluss und Komfortplätze mit Zu- und Abwasser — viele Plätze mit Blick über den See, ruhig und naturnah angelegt.",
-        image: { src: `${IMG}/gallery-60b2569a2d.webp`, alt: "Terrassierte Stellplätze mit Wohnwagen am Weissensee in der Abenddämmerung" },
+        image: { src: `${IMG}/platz-seeblick-sonne.webp`, alt: "Sonniger Blick über die Terrassenplätze zum Weissensee mit Bergkulisse" },
       },
       {
         title: "Moderne Sanitäranlagen",
